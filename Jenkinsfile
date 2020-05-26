@@ -5,7 +5,7 @@ pipeline {
         stage('Example') {
             steps {
                 echo 'Launch CI'
-                sh "./launch.sh"
+                sh "chmod 755 launch.sh && ./launch.sh"
                 publishEvent simpleEvent('SimpleTrigger')
             }
         }
